@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnThemPhong = new FontAwesome.Sharp.IconButton();
@@ -37,6 +37,8 @@
             this.btnTraphong = new FontAwesome.Sharp.IconButton();
             this.btnSuaphong = new FontAwesome.Sharp.IconButton();
             this.panelPhong = new System.Windows.Forms.Panel();
+            this.btnCoc = new FontAwesome.Sharp.IconButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbTinhTrang = new System.Windows.Forms.ComboBox();
             this.btnChoThue = new FontAwesome.Sharp.IconButton();
@@ -50,7 +52,6 @@
             this.cbbDayTro = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelPhong.SuspendLayout();
             this.panPhong1.SuspendLayout();
@@ -72,23 +73,23 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(14, 10);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -168,6 +169,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.panelPhong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelPhong.Controls.Add(this.btnCoc);
             this.panelPhong.Controls.Add(this.txtTimKiem);
             this.panelPhong.Controls.Add(this.label4);
             this.panelPhong.Controls.Add(this.cbbTinhTrang);
@@ -182,6 +184,33 @@
             this.panelPhong.Name = "panelPhong";
             this.panelPhong.Size = new System.Drawing.Size(890, 354);
             this.panelPhong.TabIndex = 2;
+            this.panelPhong.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPhong_Paint);
+            // 
+            // btnCoc
+            // 
+            this.btnCoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCoc.BackColor = System.Drawing.Color.Tomato;
+            this.btnCoc.IconChar = FontAwesome.Sharp.IconChar.HouseChimneyMedical;
+            this.btnCoc.IconColor = System.Drawing.Color.White;
+            this.btnCoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCoc.IconSize = 30;
+            this.btnCoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCoc.Location = new System.Drawing.Point(683, 31);
+            this.btnCoc.Name = "btnCoc";
+            this.btnCoc.Size = new System.Drawing.Size(75, 37);
+            this.btnCoc.TabIndex = 37;
+            this.btnCoc.Text = "Cọc";
+            this.btnCoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCoc.UseVisualStyleBackColor = false;
+            this.btnCoc.Click += new System.EventHandler(this.btnCoc_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(389, 33);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(155, 23);
+            this.txtTimKiem.TabIndex = 36;
             // 
             // label4
             // 
@@ -197,7 +226,7 @@
             this.cbbTinhTrang.DisplayMember = "Tình trạng";
             this.cbbTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTinhTrang.FormattingEnabled = true;
-            this.cbbTinhTrang.Location = new System.Drawing.Point(241, 37);
+            this.cbbTinhTrang.Location = new System.Drawing.Point(225, 34);
             this.cbbTinhTrang.Name = "cbbTinhTrang";
             this.cbbTinhTrang.Size = new System.Drawing.Size(148, 25);
             this.cbbTinhTrang.TabIndex = 34;
@@ -206,14 +235,14 @@
             // 
             this.btnChoThue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChoThue.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnChoThue.IconChar = FontAwesome.Sharp.IconChar.HouseChimneyMedical;
+            this.btnChoThue.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
             this.btnChoThue.IconColor = System.Drawing.Color.White;
             this.btnChoThue.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnChoThue.IconSize = 30;
             this.btnChoThue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoThue.Location = new System.Drawing.Point(744, 31);
+            this.btnChoThue.Location = new System.Drawing.Point(764, 31);
             this.btnChoThue.Name = "btnChoThue";
-            this.btnChoThue.Size = new System.Drawing.Size(122, 37);
+            this.btnChoThue.Size = new System.Drawing.Size(102, 37);
             this.btnChoThue.TabIndex = 33;
             this.btnChoThue.Text = "Cho thuê";
             this.btnChoThue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,6 +263,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(35, 35);
             this.btnTimKiem.TabIndex = 32;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label2
             // 
@@ -319,6 +349,7 @@
             this.dgvPhongTro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhongTro.Size = new System.Drawing.Size(683, 187);
             this.dgvPhongTro.TabIndex = 24;
+            this.dgvPhongTro.DoubleClick += new System.EventHandler(this.dgvPhongTro_DoubleClick);
             // 
             // cbbDayTro
             // 
@@ -350,13 +381,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(914, 49);
             this.panel1.TabIndex = 41;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(451, 37);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(155, 20);
-            this.txtTimKiem.TabIndex = 36;
             // 
             // Phong
             // 
@@ -400,5 +424,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private FontAwesome.Sharp.IconButton btnCoc;
     }
 }

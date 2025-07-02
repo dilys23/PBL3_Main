@@ -193,11 +193,10 @@ namespace PBL3___Motel_Management_System
         TrangChu tc = new TrangChu();
 
       
-
         private void btnThemPhong_Click_1(object sender, EventArgs e)
         {
-           
-           tc.openChildForm1(new ThemDV(LoadForm), panelDV);
+            
+            tc.openChildForm1(new ThemDV(LoadForm), panelDV);
         }
 
         private void btnSuaDV_Click(object sender, EventArgs e)
@@ -209,6 +208,23 @@ namespace PBL3___Motel_Management_System
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             LoadForm(txtTimKiem.Text);
+        }
+
+        private void btnXoaPhong_Click(object sender, EventArgs e)
+        {
+            string id = dgvDichVu.CurrentRow.Cells[0].Value.ToString();
+            if(id != "000" && id != "001")
+            {
+                QLBLL qLBLL = new QLBLL();
+                qLBLL.DelChiTietDichVuByIdDichVu(id);
+                qLBLL.DelDichVu(id);
+                MessageBox.Show("Xóa dịch vụ thành công", "Thông báo");
+                LoadForm(null);
+            }
+            else
+            {
+                MessageBox.Show("Đây là dịch vụ cố định!! Không thể xóa");
+            }
         }
     }
 }

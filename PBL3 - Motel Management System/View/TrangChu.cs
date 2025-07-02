@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace PBL3___Motel_Management_System
@@ -20,10 +21,18 @@ namespace PBL3___Motel_Management_System
         public TrangChu()
         {
             InitializeComponent();
-           CollapseMenu();
+            // Tạo UserControl và truyền Panel của trang chủ vào
+            TaiKhoan myUserControl = new TaiKhoan();
+            myUserControl.DesktopPanel = panelDesktop;
+
+            // Hiển thị UserControl
+            //panelDesktop.Controls.Add(myUserControl);
+            //myUserControl.Dock = DockStyle.None;
+            CollapseMenu();
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(217, 247, 249);
-         
+          
+
         }
 
         private void Menu1_Load(object sender, EventArgs e)
@@ -153,7 +162,7 @@ namespace PBL3___Motel_Management_System
                 paneMenu.Width = 100;
                 pictureBox1.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
-                foreach (Button menuButton in paneMenu.Controls.OfType<Button>())
+                foreach (System.Windows.Forms.Button menuButton in paneMenu.Controls.OfType<System.Windows.Forms.Button>())
                 {
                     menuButton.Text = "";
                     menuButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -165,7 +174,7 @@ namespace PBL3___Motel_Management_System
                 paneMenu.Width = 230;
                 pictureBox1.Visible = true;
                 btnMenu.Dock = DockStyle.None;
-                foreach (Button menuButton in paneMenu.Controls.OfType<Button>())
+                foreach (System.Windows.Forms.Button menuButton in paneMenu.Controls.OfType<System.Windows.Forms.Button>())
                 {
                    menuButton.Text = "  " + menuButton.Tag.ToString();
                     menuButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -217,7 +226,7 @@ namespace PBL3___Motel_Management_System
         }
 
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if(activeForm != null)
                 activeForm.Close();
@@ -232,7 +241,7 @@ namespace PBL3___Motel_Management_System
 
         }
 
-        public  void openChildForm1(Form childForm, Panel p)
+        public  void openChildForm1(Form childForm, System.Windows.Forms.Panel p)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -271,12 +280,12 @@ namespace PBL3___Motel_Management_System
 
         private void btnHopDong_Click(object sender, EventArgs e)
         {
-            openChildForm(new HopDong());
+            openChildForm(new Hopdong());
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            openChildForm(new HoaDon());
+            openChildForm(new Hoadon());
         }
 
         private void btnDoanhTHu_Click(object sender, EventArgs e)
@@ -311,7 +320,29 @@ namespace PBL3___Motel_Management_System
 
         private void btnThietbi_Click(object sender, EventArgs e)
         {
-            openChildForm(new ThietBi());   
+            openChildForm(new Thietbi());   
+        }
+       // taiKhoan1.BringToFront();
+
+        private void btnTK_Click(object sender, EventArgs e)
+        {
+            
+           // taiKhoan1.BringToFront();
+           // taiKhoan1.Toggle();
+            if (taiKhoan1.Visible)
+            {
+                taiKhoan1.Hide();
+            }
+            else
+            {
+                taiKhoan1.Show();
+            }
+            taiKhoan1.BringToFront();
+        }
+
+        private void taiKhoan1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace PBL3___Motel_Management_System.View
 {
-    public partial class ChitietThanhVien : Form
+    public partial class Anh : Form
     {
-        public ChitietThanhVien()
+        public Anh(Image picture)
         {
             InitializeComponent();
+            this.picture.Image = picture;
         }
     }
 }

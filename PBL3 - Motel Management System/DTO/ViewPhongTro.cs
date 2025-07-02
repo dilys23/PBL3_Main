@@ -17,5 +17,10 @@ namespace PBL3___Motel_Management_System.DTO
         public bool TinhTrang { get; set; }
         public int SoNguoiHienCo { get; set; }
         public int SoNguoiToiDa { get; set; }
+        public string TenDay { get; set; }
+
+        public byte[] HinhAnh { get; set; }
+
+
     }
 }

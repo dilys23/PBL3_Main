@@ -26,8 +26,10 @@ namespace PBL3___Motel_Management_System.DAL
         public string TenHuyen { get; set; }
         public string TenThanhPho { get; set; }
         public string MaChuTro { get; set; }
+        public byte[] HinhAnh { get; set; }
     
         public virtual Nguoi Nguoi { get; set; }
+        public virtual Nguoi Nguoi1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhongTro> PhongTro { get; set; }
     }

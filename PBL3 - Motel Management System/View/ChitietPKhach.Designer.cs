@@ -1,6 +1,6 @@
 ﻿namespace PBL3___Motel_Management_System.View
 {
-    partial class ChitietThanhVien
+    partial class ChitietPKhach
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ChitietPKhach
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ChitietThanhVien";
+            this.ClientSize = new System.Drawing.Size(932, 434);
+            this.Name = "ChitietPKhach";
+            this.Text = "ChitietPKhach";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

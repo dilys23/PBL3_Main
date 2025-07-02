@@ -70,6 +70,9 @@
     <Compile Include="DAL\ChiTietDichVu.cs">
       <DependentUpon>DataPbl.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ChiTietSuDungDichVu.cs">
+      <DependentUpon>DataPbl.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAL\ChiTietThietBi.cs">
       <DependentUpon>DataPbl.tt</DependentUpon>
     </Compile>
@@ -92,6 +95,9 @@
       <DependentUpon>DataPbl.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\DichVu.cs">
+      <DependentUpon>DataPbl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\HoaDon.cs">
       <DependentUpon>DataPbl.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\HopDong.cs">
@@ -120,9 +126,21 @@
       <DependentUpon>DataPbl.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\CbbDayTro.cs" />
+    <Compile Include="DTO\ChuyenDoiAnh.cs" />
+    <Compile Include="DTO\DgvHopDong.cs" />
+    <Compile Include="DTO\ThuePhong.cs" />
+    <Compile Include="DTO\ViewChiSoDien.cs" />
+    <Compile Include="DTO\ViewChiSoNuoc.cs" />
     <Compile Include="DTO\ViewDay.cs" />
     <Compile Include="DTO\ViewDichVu.cs" />
     <Compile Include="DTO\ViewPhongTro.cs" />
+    <Compile Include="DTO\ViewThietBi.cs" />
+    <Compile Include="View\Anh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Anh.Designer.cs">
+      <DependentUpon>Anh.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChitietDay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,23 +153,53 @@
     <Compile Include="View\ChitietHopDong.Designer.cs">
       <DependentUpon>ChitietHopDong.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ChitietNguoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChitietNguoi.Designer.cs">
+      <DependentUpon>ChitietNguoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChitietPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\ChitietPhong.Designer.cs">
       <DependentUpon>ChitietPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ChitietThanhVien.cs">
+    <Compile Include="View\ChitietPKhach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ChitietThanhVien.Designer.cs">
-      <DependentUpon>ChitietThanhVien.cs</DependentUpon>
+    <Compile Include="View\ChitietPKhach.Designer.cs">
+      <DependentUpon>ChitietPKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChuTro.Designer.cs">
+      <DependentUpon>ChuTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CocPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CocPhong.Designer.cs">
+      <DependentUpon>CocPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Daytro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Daytro.Designer.cs">
       <DependentUpon>Daytro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DoiMK.Designer.cs">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PKhach.Designer.cs">
+      <DependentUpon>PKhach.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SuaCSDien.cs">
       <SubType>Form</SubType>
@@ -182,6 +230,12 @@
     </Compile>
     <Compile Include="View\SuaHopDong.Designer.cs">
       <DependentUpon>SuaHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuaThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuaThietBi.Designer.cs">
+      <DependentUpon>SuaThietBi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ThemCSDien.cs">
       <SubType>Form</SubType>
@@ -237,17 +291,17 @@
     <Compile Include="View\ThemDay.Designer.cs">
       <DependentUpon>ThemDay.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\HoaDon.cs">
+    <Compile Include="View\Hoadon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <Compile Include="View\Hoadon.Designer.cs">
+      <DependentUpon>Hoadon.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\HopDong.cs">
+    <Compile Include="View\Hopdong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\HopDong.Designer.cs">
-      <DependentUpon>HopDong.cs</DependentUpon>
+    <Compile Include="View\Hopdong.Designer.cs">
+      <DependentUpon>Hopdong.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ChisoDien.cs">
       <SubType>Form</SubType>
@@ -279,11 +333,11 @@
     <Compile Include="View\ThemThietBiPhong.Designer.cs">
       <DependentUpon>ThemThietBiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ThietBi.cs">
+    <Compile Include="View\Thietbi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ThietBi.Designer.cs">
-      <DependentUpon>ThietBi.cs</DependentUpon>
+    <Compile Include="View\Thietbi.Designer.cs">
+      <DependentUpon>Thietbi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TrangChu.cs">
       <SubType>Form</SubType>
@@ -323,12 +377,27 @@
     <Compile Include="View\ChisoNuoc.Designer.cs">
       <DependentUpon>ChisoNuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChuKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChuKhach.Designer.cs">
+      <DependentUpon>TrangChuKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\XuatHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\XuatHoaDon.Designer.cs">
       <DependentUpon>XuatHoaDon.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Anh.resx">
+      <DependentUpon>Anh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ChitietDay.resx">
       <DependentUpon>ChitietDay.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,8 +407,23 @@
     <EmbeddedResource Include="View\ChitietPhong.resx">
       <DependentUpon>ChitietPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ChitietPKhach.resx">
+      <DependentUpon>ChitietPKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuTro.resx">
+      <DependentUpon>ChuTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CocPhong.resx">
+      <DependentUpon>CocPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Daytro.resx">
       <DependentUpon>Daytro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DoiMK.resx">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PKhach.resx">
+      <DependentUpon>PKhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SuaCSDien.resx">
       <DependentUpon>SuaCSDien.cs</DependentUpon>
@@ -355,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SuaHopDong.resx">
       <DependentUpon>SuaHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuaThietBi.resx">
+      <DependentUpon>SuaThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThemCSDien.resx">
       <DependentUpon>ThemCSDien.cs</DependentUpon>
@@ -383,11 +470,11 @@
     <EmbeddedResource Include="View\ThemDay.resx">
       <DependentUpon>ThemDay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="View\Hoadon.resx">
+      <DependentUpon>Hoadon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\HopDong.resx">
-      <DependentUpon>HopDong.cs</DependentUpon>
+    <EmbeddedResource Include="View\Hopdong.resx">
+      <DependentUpon>Hopdong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChisoDien.resx">
       <DependentUpon>ChisoDien.cs</DependentUpon>
@@ -407,8 +494,8 @@
     <EmbeddedResource Include="View\ThemThietBiPhong.resx">
       <DependentUpon>ThemThietBiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ThietBi.resx">
-      <DependentUpon>ThietBi.cs</DependentUpon>
+    <EmbeddedResource Include="View\Thietbi.resx">
+      <DependentUpon>Thietbi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
@@ -433,6 +520,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChisoNuoc.resx">
       <DependentUpon>ChisoNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChuKhach.resx">
+      <DependentUpon>TrangChuKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\XuatHoaDon.resx">
       <DependentUpon>XuatHoaDon.cs</DependentUpon>
@@ -459,6 +552,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DAL\DataPbl.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataPbl.edmx</DependentUpon>
@@ -469,9 +565,6 @@
       <DependentUpon>DataPbl.edmx</DependentUpon>
       <LastGenOutput>DataPbl.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

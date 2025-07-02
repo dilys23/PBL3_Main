@@ -29,21 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvDichvu = new System.Windows.Forms.DataGridView();
-            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPhong = new System.Windows.Forms.DataGridView();
-            this.Tendaytro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhongTro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.btnTK = new FontAwesome.Sharp.IconButton();
             this.btnMinimized = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnMaximized = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.paneMenu = new System.Windows.Forms.Panel();
+            this.btnThietbi = new FontAwesome.Sharp.IconButton();
             this.btnDay = new FontAwesome.Sharp.IconButton();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnDoanhTHu = new FontAwesome.Sharp.IconButton();
@@ -57,118 +50,43 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
-            this.btnThietbi = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDichvu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.taiKhoan1 = new PBL3___Motel_Management_System.View.TaiKhoan();
             this.panelTitle.SuspendLayout();
             this.paneMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Controls.Add(this.label2);
-            this.panelDesktop.Controls.Add(this.dgvDichvu);
-            this.panelDesktop.Controls.Add(this.dgvPhong);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(200, 51);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(999, 632);
-            this.panelDesktop.TabIndex = 5;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(440, 232);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Dịch vụ:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(11, 235);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Danh sách phòng trống:";
-            // 
-            // dgvDichvu
-            // 
-            this.dgvDichvu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDichvu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvDichvu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichvu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenDichVu,
-            this.GiaDichVu});
-            this.dgvDichvu.Location = new System.Drawing.Point(443, 256);
-            this.dgvDichvu.Name = "dgvDichvu";
-            this.dgvDichvu.RowHeadersWidth = 51;
-            this.dgvDichvu.RowTemplate.Height = 24;
-            this.dgvDichvu.Size = new System.Drawing.Size(402, 207);
-            this.dgvDichvu.TabIndex = 14;
-            // 
-            // TenDichVu
-            // 
-            this.TenDichVu.HeaderText = "Tên";
-            this.TenDichVu.MinimumWidth = 6;
-            this.TenDichVu.Name = "TenDichVu";
-            // 
-            // GiaDichVu
-            // 
-            this.GiaDichVu.HeaderText = "Giá";
-            this.GiaDichVu.MinimumWidth = 6;
-            this.GiaDichVu.Name = "GiaDichVu";
-            // 
-            // dgvPhong
-            // 
-            this.dgvPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPhong.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tendaytro,
-            this.TenPhongTro});
-            this.dgvPhong.Location = new System.Drawing.Point(14, 254);
-            this.dgvPhong.Name = "dgvPhong";
-            this.dgvPhong.RowHeadersWidth = 51;
-            this.dgvPhong.RowTemplate.Height = 24;
-            this.dgvPhong.Size = new System.Drawing.Size(402, 207);
-            this.dgvPhong.TabIndex = 13;
-            // 
-            // Tendaytro
-            // 
-            this.Tendaytro.HeaderText = "Tên dãy trọ";
-            this.Tendaytro.MinimumWidth = 6;
-            this.Tendaytro.Name = "Tendaytro";
-            // 
-            // TenPhongTro
-            // 
-            this.TenPhongTro.HeaderText = "Phòng";
-            this.TenPhongTro.MinimumWidth = 6;
-            this.TenPhongTro.Name = "TenPhongTro";
             // 
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(229)))), ((int)(((byte)(236)))));
+            this.panelTitle.Controls.Add(this.btnTK);
             this.panelTitle.Controls.Add(this.btnMinimized);
             this.panelTitle.Controls.Add(this.btnExit);
             this.panelTitle.Controls.Add(this.btnMaximized);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(200, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(999, 51);
+            this.panelTitle.Size = new System.Drawing.Size(1138, 83);
             this.panelTitle.TabIndex = 4;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            // 
+            // btnTK
+            // 
+            this.btnTK.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTK.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnTK.IconColor = System.Drawing.Color.DarkCyan;
+            this.btnTK.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTK.IconSize = 25;
+            this.btnTK.Location = new System.Drawing.Point(1081, 44);
+            this.btnTK.Name = "btnTK";
+            this.btnTK.Size = new System.Drawing.Size(45, 39);
+            this.btnTK.TabIndex = 4;
+            this.btnTK.UseVisualStyleBackColor = true;
+            this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
             // btnMinimized
             // 
@@ -180,7 +98,7 @@
             this.btnMinimized.IconColor = System.Drawing.Color.LightCyan;
             this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimized.IconSize = 30;
-            this.btnMinimized.Location = new System.Drawing.Point(893, 7);
+            this.btnMinimized.Location = new System.Drawing.Point(1032, 7);
             this.btnMinimized.Name = "btnMinimized";
             this.btnMinimized.Size = new System.Drawing.Size(30, 31);
             this.btnMinimized.TabIndex = 3;
@@ -197,7 +115,7 @@
             this.btnExit.IconColor = System.Drawing.Color.Red;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 30;
-            this.btnExit.Location = new System.Drawing.Point(965, 7);
+            this.btnExit.Location = new System.Drawing.Point(1104, 7);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(30, 31);
             this.btnExit.TabIndex = 2;
@@ -214,7 +132,7 @@
             this.btnMaximized.IconColor = System.Drawing.Color.LightSeaGreen;
             this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximized.IconSize = 30;
-            this.btnMaximized.Location = new System.Drawing.Point(929, 7);
+            this.btnMaximized.Location = new System.Drawing.Point(1068, 7);
             this.btnMaximized.Name = "btnMaximized";
             this.btnMaximized.Size = new System.Drawing.Size(30, 31);
             this.btnMaximized.TabIndex = 1;
@@ -250,9 +168,28 @@
             this.paneMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.paneMenu.Location = new System.Drawing.Point(0, 0);
             this.paneMenu.Name = "paneMenu";
-            this.paneMenu.Size = new System.Drawing.Size(200, 683);
+            this.paneMenu.Size = new System.Drawing.Size(200, 749);
             this.paneMenu.TabIndex = 3;
             this.paneMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.paneMenu_Paint);
+            // 
+            // btnThietbi
+            // 
+            this.btnThietbi.FlatAppearance.BorderSize = 0;
+            this.btnThietbi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThietbi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThietbi.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            this.btnThietbi.IconColor = System.Drawing.Color.SteelBlue;
+            this.btnThietbi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThietbi.IconSize = 35;
+            this.btnThietbi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThietbi.Location = new System.Drawing.Point(8, 408);
+            this.btnThietbi.Name = "btnThietbi";
+            this.btnThietbi.Size = new System.Drawing.Size(186, 41);
+            this.btnThietbi.TabIndex = 19;
+            this.btnThietbi.Tag = "Thiết bị ";
+            this.btnThietbi.Text = "Thiết bị ";
+            this.btnThietbi.UseVisualStyleBackColor = true;
+            this.btnThietbi.Click += new System.EventHandler(this.btnThietbi_Click);
             // 
             // btnDay
             // 
@@ -264,7 +201,7 @@
             this.btnDay.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDay.IconSize = 35;
             this.btnDay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDay.Location = new System.Drawing.Point(8, 136);
+            this.btnDay.Location = new System.Drawing.Point(8, 134);
             this.btnDay.Name = "btnDay";
             this.btnDay.Size = new System.Drawing.Size(186, 41);
             this.btnDay.TabIndex = 18;
@@ -284,7 +221,7 @@
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Regular;
             this.btnLogout.IconSize = 30;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(12, 638);
+            this.btnLogout.Location = new System.Drawing.Point(12, 662);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(45, 45);
             this.btnLogout.TabIndex = 17;
@@ -303,7 +240,7 @@
             this.btnDoanhTHu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDoanhTHu.IconSize = 35;
             this.btnDoanhTHu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoanhTHu.Location = new System.Drawing.Point(8, 585);
+            this.btnDoanhTHu.Location = new System.Drawing.Point(8, 583);
             this.btnDoanhTHu.Name = "btnDoanhTHu";
             this.btnDoanhTHu.Size = new System.Drawing.Size(186, 41);
             this.btnDoanhTHu.TabIndex = 13;
@@ -322,7 +259,7 @@
             this.btnHoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHoaDon.IconSize = 35;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.Location = new System.Drawing.Point(8, 532);
+            this.btnHoaDon.Location = new System.Drawing.Point(8, 530);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(186, 41);
             this.btnHoaDon.TabIndex = 12;
@@ -341,7 +278,7 @@
             this.btnHopDong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHopDong.IconSize = 35;
             this.btnHopDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHopDong.Location = new System.Drawing.Point(8, 467);
+            this.btnHopDong.Location = new System.Drawing.Point(8, 465);
             this.btnHopDong.Name = "btnHopDong";
             this.btnHopDong.Size = new System.Drawing.Size(186, 41);
             this.btnHopDong.TabIndex = 11;
@@ -360,7 +297,7 @@
             this.btnNuoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuoc.IconSize = 35;
             this.btnNuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuoc.Location = new System.Drawing.Point(8, 354);
+            this.btnNuoc.Location = new System.Drawing.Point(8, 352);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(186, 41);
             this.btnNuoc.TabIndex = 10;
@@ -379,7 +316,7 @@
             this.btnTrangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTrangchu.IconSize = 35;
             this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.Location = new System.Drawing.Point(8, 92);
+            this.btnTrangchu.Location = new System.Drawing.Point(8, 90);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Size = new System.Drawing.Size(186, 41);
             this.btnTrangchu.TabIndex = 7;
@@ -398,7 +335,7 @@
             this.btnDien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDien.IconSize = 35;
             this.btnDien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDien.Location = new System.Drawing.Point(8, 295);
+            this.btnDien.Location = new System.Drawing.Point(8, 293);
             this.btnDien.Name = "btnDien";
             this.btnDien.Size = new System.Drawing.Size(182, 41);
             this.btnDien.TabIndex = 9;
@@ -417,7 +354,7 @@
             this.btnDichVu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDichVu.IconSize = 35;
             this.btnDichVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDichVu.Location = new System.Drawing.Point(8, 235);
+            this.btnDichVu.Location = new System.Drawing.Point(8, 233);
             this.btnDichVu.Name = "btnDichVu";
             this.btnDichVu.Size = new System.Drawing.Size(186, 41);
             this.btnDichVu.TabIndex = 8;
@@ -436,7 +373,7 @@
             this.btnPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPhong.IconSize = 35;
             this.btnPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhong.Location = new System.Drawing.Point(8, 183);
+            this.btnPhong.Location = new System.Drawing.Point(8, 181);
             this.btnPhong.Name = "btnPhong";
             this.btnPhong.Size = new System.Drawing.Size(186, 41);
             this.btnPhong.TabIndex = 6;
@@ -482,29 +419,33 @@
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // btnThietbi
+            // panelDesktop
             // 
-            this.btnThietbi.FlatAppearance.BorderSize = 0;
-            this.btnThietbi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThietbi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThietbi.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
-            this.btnThietbi.IconColor = System.Drawing.Color.SteelBlue;
-            this.btnThietbi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThietbi.IconSize = 35;
-            this.btnThietbi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThietbi.Location = new System.Drawing.Point(8, 410);
-            this.btnThietbi.Name = "btnThietbi";
-            this.btnThietbi.Size = new System.Drawing.Size(186, 41);
-            this.btnThietbi.TabIndex = 19;
-            this.btnThietbi.Tag = "Thiết bị ";
-            this.btnThietbi.Text = "Thiết bị ";
-            this.btnThietbi.UseVisualStyleBackColor = true;
-            this.btnThietbi.Click += new System.EventHandler(this.btnThietbi_Click);
+            this.panelDesktop.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.panelDesktop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelDesktop.Controls.Add(this.taiKhoan1);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelDesktop.Location = new System.Drawing.Point(200, 83);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1138, 666);
+            this.panelDesktop.TabIndex = 5;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // taiKhoan1
+            // 
+            this.taiKhoan1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.taiKhoan1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.taiKhoan1.DesktopPanel = null;
+            this.taiKhoan1.Location = new System.Drawing.Point(914, 7);
+            this.taiKhoan1.Name = "taiKhoan1";
+            this.taiKhoan1.Size = new System.Drawing.Size(212, 344);
+            this.taiKhoan1.TabIndex = 17;
+            this.taiKhoan1.Visible = false;
             // 
             // TrangChu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1199, 683);
+            this.ClientSize = new System.Drawing.Size(1338, 749);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.paneMenu);
@@ -514,22 +455,17 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.Menu1_Load);
             this.Resize += new System.EventHandler(this.Menu1_Resize);
-            this.panelDesktop.ResumeLayout(false);
-            this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDichvu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.paneMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel paneMenu;
         private System.Windows.Forms.Panel panel1;
@@ -547,16 +483,11 @@
         private FontAwesome.Sharp.IconButton btnPhong;
         private FontAwesome.Sharp.IconButton btnDoanhTHu;
         private FontAwesome.Sharp.IconButton btnHoaDon;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvDichvu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDichVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GiaDichVu;
-        private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tendaytro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhongTro;
         private FontAwesome.Sharp.IconButton btnLogout;
         private FontAwesome.Sharp.IconButton btnDay;
         private FontAwesome.Sharp.IconButton btnThietbi;
+        private FontAwesome.Sharp.IconButton btnTK;
+        private System.Windows.Forms.Panel panelDesktop;
+        private View.TaiKhoan taiKhoan1;
     }
 }

@@ -19,6 +19,8 @@ namespace PBL3___Motel_Management_System.DAL
         {
             this.ChiTietDichVu = new HashSet<ChiTietDichVu>();
             this.ChiTietThietBi = new HashSet<ChiTietThietBi>();
+            this.HoaDon = new HashSet<HoaDon>();
+            this.HoaDon1 = new HashSet<HoaDon>();
             this.HopDong = new HashSet<HopDong>();
             this.ThanhVienTrongPhong = new HashSet<ThanhVienTrongPhong>();
         }
@@ -30,12 +32,17 @@ namespace PBL3___Motel_Management_System.DAL
         public bool TinhTrang { get; set; }
         public string MaDayTro { get; set; }
         public Nullable<int> ToiDa { get; set; }
+        public byte[] HinhAnh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDichVu> ChiTietDichVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietThietBi> ChiTietThietBi { get; set; }
         public virtual DayTro DayTro { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDon { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDon1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HopDong> HopDong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
